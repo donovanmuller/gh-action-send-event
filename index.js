@@ -16,11 +16,9 @@ try {
         },
         body: event,
     })
-      .then(response => response.json())
-      .then(json =>  console.log(json))
-      .catch(err => console.error(err));
-
-
+      .then(json => console.log(json))
+      .catch(err => console.error(err))
+      .then(response => response.json());
 } catch (error) {
     core.setFailed(error.message);
 }
